@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag and Drop Demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <h1>Drag and Drop CSV File</h1>
+  <label for="csvInput" name="uploadedFile" id="dropZone" ondrop="handleDrop(event)" ondragover="handleDragOver(event)">
+    <div class="icon-container">
+      <i class="fa-solid fa-cloud-arrow-up fa-xl" style="color: #bababa;"></i>
+    </div>
+    <h2>Drop .csv file here</h2>
+    <h4></h4>
+    <form id="phpForm" action="insert.php" method="post" enctype="multipart/form-data">
+      <label for="csvInput" class="selectButton">Browse Files</label>
+      <input type="file" id="csvInput" name="uploadedFile" accept=".csv" style="display: none;">
+      
+    </form>
+  </label>
+
+  <p id="fileInfo"></p>
+  <h3>Upload selected file to directory</h3>
+  <button type="submit" class="selectButton" form="phpForm" name="uploadBtn">Upload File</button>
+  <script src="script.js"></script>
+</body>
+</html>

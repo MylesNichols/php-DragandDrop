@@ -1,0 +1,70 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#dropZone {
+  width: 300px;
+  height: 200px;
+  border: 2px dashed #ccc;
+  border-style: dashed;
+  margin-bottom: 20px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  position: relative;
+  box-shadow: 0 0 0 10px rgba(200, 200, 200, 0.3);
+}
+
+#dropZone h2, #dropZone h4, .selectButton {
+  margin: 10px 0;
+}
+
+#dropZone h4 {
+  padding-bottom: 15px;
+}
+.icon-container {
+  margin-bottom: 10px;
+  margin-top: 7px;
+}
+
+#fileInfo {
+  margin-top: 20px;
+}
+
+.selectButton {
+  cursor: pointer;
+  background-color: #fff;
+  color: #6bcbf0;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 3px solid #6bcbf0;
+  margin-top: 20px;
+}
+
+.selectButton:hover {
+  background-color: #6bcbf0;
+  color: #fff;
+  transition: ease-in-out .25s;
+}
+
+#csvInput {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  #dropZone {
+    width: 80%;
+    height: 150px;
+    font-size: 16px;
+  }
+}
